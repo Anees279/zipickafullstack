@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 
 // MongoDB connection string
-const mongoURI =
-  "mongodb+srv://dealership:Anees279%40@cluster0.1zpmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoURI =process.env.MONGO_URI_DEALER
 
 // Connect to MongoDB
 // mongoose

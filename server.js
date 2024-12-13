@@ -1,8 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+
 
 // Import dealer routes
 const dealerRoutes = require('./dealer'); // Adjust path if needed
@@ -32,8 +34,8 @@ app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use(bodyParser.json()); // Parse incoming JSON requests
 
 // MongoDB connection URI
-const mongoURI =
-  "mongodb+srv://aneesmir279:Anees279%40@cluster0.1zpmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoURI = process.env.MONGO_URI_CONTACT; 
+console.log("Mongo URI:", mongoURI);
 
 // Connect to MongoDB
 mongoose
@@ -113,7 +115,8 @@ app.post('/contact_us', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Use PORT from .env or fallback to 3000
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

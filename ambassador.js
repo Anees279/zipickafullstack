@@ -1,10 +1,10 @@
+
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
 
 // MongoDB connection URI
-const mongoURI =
-  "mongodb+srv://ambassador:Anees279%40@cluster0.1zpmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoURI = process.env.MONGO_URI_AMBASSADOR;
 
 // Connect to MongoDB Atlas
 // mongoose
