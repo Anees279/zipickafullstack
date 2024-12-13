@@ -1,0 +1,49 @@
+
+  .contact-form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  .contact_us {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .info-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .form-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+  .info-list {
+    font-size: 1rem;
+  }
+  
+  .info-list li {
+    transition: color 0.3s ease;
+  }
+  
+  .info-list li a {
+    transition: color 0.3s ease;
+  }
+  
+  .info-list li a:hover {
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: underline;
+  }
+  
+  .info-list i {
+    color: #6c757d; /* Subtle gray for icons */
+    font-size: 1.2rem;
+  }
+  
+  

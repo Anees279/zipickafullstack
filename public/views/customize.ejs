@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>customize</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div id="navbar-container">
+        <%- include('navbar') %>
+    </div>
+    <!-- hero_section -->
+    <section class="text-center py-5">
+        <div class="container">
+            <!-- Heading -->
+            <h2 class="mb-4">Personalizing Your Perfect Travel Adapter</h2>
+            <!-- Paragraph -->
+            <p class="mb-4">
+                Select the adapter color and style that you prefer.
+            </p>
+            <!-- Image -->
+            <div class="d-flex justify-content-center">
+                <img src="/img/C321_b327ab2c-e372-473d-a07c-1b181641c393.webp" alt="Global Favorite Image"
+                    class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+            <p class="mb-4">
+                Select the customization color and style that you prefer.
+            </p>
+            <!-- Image -->
+            <div class="d-flex justify-content-center">
+                <img src="/img/TA-105C_4.webp" alt="Global Favorite Image" class="img-fluid rounded"
+                    style="max-width: 100%; height: auto;">
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="/img/17024_f89e2d39-77da-4dc4-990b-fc9508113f85_1024x1024.webp" alt="Global Favorite Image"
+                    class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <h2 class="mb-4">Personalizing Your Perfect Travel Adapter</h2>
+        <!-- Paragraph -->
+        <p class="mb-4">
+            Once the design is saved, you won't be able to change the color. If you wish to customize adapters in
+            multiple colors, please complete separate checkouts for each color option.
+        </p>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Watch Our Travel Adapter in Action</h2>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/your-video-id" title="Travel Adapter Video" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="footer-container">
+        <%- include('footer') %> <!-- EJS partial for footer -->
+      </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JavaScript -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/code.js"></script>
+
+
+</body>
+
+</html>

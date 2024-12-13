@@ -1,0 +1,444 @@
+/* announcement bar */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+#announcement-bar {
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  font-weight: bolder;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  animation: slideDown 0.5s ease-out forwards;
+  transform: translateY(-100%);
+}
+
+/* Animation for sliding down the announcement bar */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Animation for paragraph fade-in and fade-out */
+#announcement-bar p {
+  opacity: 0;
+  position: absolute;
+  width: 96%;
+  text-transform: uppercase;
+  margin-top: 20px;
+  animation: fadeInOut 10s ease infinite;
+}
+
+/* First paragraph starts immediately */
+#announcement-bar p:first-child {
+  animation-delay: 0s;
+}
+
+/* Second paragraph starts after the first paragraph finishes */
+#announcement-bar p:nth-child(2) {
+  animation-delay: 5s;
+}
+
+/* Fade-in and fade-out animation */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  40% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.select-container img {
+  width: 5vh; /* Set width to a fixed value */
+  height: 5vh; /* Set height to the same fixed value */
+  border-radius: 50%; /* Makes the image round */
+  /* Aligns image with select */
+}
+
+.slick .select-container select {
+  border: none; /* Removes border */
+  background: none; /* Removes background */
+  outline: none; /* Removes outline */
+  font-size: 16px; /* Optional: Adjust font size */
+  vertical-align: middle; /* Aligns select with image */
+}
+select {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline on focus */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #333; /* Optional: Set text color */
+  font-family: inherit; /* Optional: Use the same font as the surrounding text */
+}
+.form {
+  margin-top: 3px;
+}
+.language option {
+  background-color: transparent !important;
+  border: none;
+}
+.hero_section {
+  width: 100%;
+  height: auto; /* Full viewport height */
+  overflow: hidden; /* Prevent overflow */
+}
+.hero {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  /* overflow: hidden;  */
+}
+
+/* Responsive images inside the slider */
+.autoplay {
+  width: 100%;
+  height: 95%;
+}
+
+.autoslide img {
+  width: 100%; /* Image takes full width */
+  height: 100%; /* Image takes full height */
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+}
+
+/* If using Slick, style dots and arrows */
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.Slide_1 img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.container-fluid .autoplay {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+}
+
+.Slide_2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero_section .autoplay {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjusts gap between slides */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.Slide_2 {
+  width: 200px; /* Set fixed width for equal size */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Slide_2 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* margin-bottom: 10px; */
+}
+
+.conmain_img img {
+  width: 95%;
+}
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.fas {
+  background-color: rgb(245, 238, 238);
+  color: black;
+  font-size: 10px;
+  padding: 10px; /* Adjust to control the size */
+  border-radius: 50%;
+  width: 30px; /* Set a fixed width */
+  height: 30px; /* Set the same height as width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+.fas:hover {
+  background: linear-gradient(180deg, black, white);
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  margin: 3px;
+  border-radius: 5px;
+  /* Optional: To round the corners of the image container */
+}
+
+/* Zoom in effect on hover */
+.image-container img {
+  width: 100%;
+  height: 33vh;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Zoom in effect by 10% */
+}
+
+/* Center Instagram icon */
+.image-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: rgb(241, 148, 163);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show Instagram icon on hover */
+.image-container:hover .icon {
+  opacity: 1;
+}
+
+/* Ensure responsive layout */
+.col-sm {
+  padding: 0; /* Remove padding for uniform gap between columns */
+}
+.Travel_Companio h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+}
+footer a {
+  text-decoration: none; /* Removes text decoration */
+  /* Inherits color from the parent */
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.payment {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  padding: 0;
+  margin: 0;
+}
+
+.payment-icon {
+  max-width: 50px;
+  height: auto;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  flex-shrink: 0; /* Prevents icons from shrinking */
+  transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+.payment-icon:hover {
+  transform: scale(1.1); /* Optional: Scale icon on hover */
+}
+.content {
+  height: 2000px;
+  background: linear-gradient(white, lightgray);
+}
+
+.sticky-payment {
+  position: sticky;
+  bottom: 0;
+  background-color: #f8f9fa; /* Adjust as needed */
+  padding: 10px 0;
+  z-index: 10; /* Ensures it appears above other elements */
+  border-top: 1px solid #ddd; /* Optional: a border to distinguish it from content */
+}
+#shop a{
+  text-decoration: none;
+  color: #fff;
+}
+.shop-btn {
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.shop-btn:hover {
+  background-color: white; /* Change background color */
+  color: black; /* Text color change */
+  border: 2px solid black; /* Add black border */
+}
+
+#shop:hover a {
+  color: black; /* Change the link text color to black on hover */
+}
+
+
+
+.shop-btn:hover a {
+  color: black; /* Ensure the link text becomes black on button hover */
+}
+
+.btn-15,
+.btn-15 *,
+.btn-15 :after,
+.btn-15 :before,
+.btn-15:after,
+.btn-15:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-15 {
+  -webkit-tap-highlight-color: 
+transparent;
+  -webkit-appearance: button;
+  background-color: 
+#000;
+  background-image: none;
+  color: 
+#fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-15:disabled {
+  cursor: default;
+}
+.btn-15:-moz-focusring {
+  outline: auto;
+}
+.btn-15 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-15 [hidden] {
+  display: none;
+}
+.btn-15 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+  z-index: 0;
+}
+.btn-15 span {
+  mix-blend-mode: difference;
+}
+.btn-15:after,
+.btn-15:before {
+  --skew: 0.2;
+  background: 
+#fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+.btn-15:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+.btn-15:hover:before {
+  --progress: 100%;
+}
+.btn-15:hover:after {
+  --progress: -102%;
+}
+
+/* Small device adjustments */
+@media (max-width: 768px) {
+  /* Additional adjustments for select container in small devices */
+  .language {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .select-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .Slide_2 {
+    max-width: 100%;
+  }
+
+  .slide_2 img {
+    width: 30vh;
+    height: 20vh;
+    object-fit: contain; /* Ensures no cropping */
+    border-radius: 50%; /* Circle shape */
+    margin-left: 50px;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .Slide_1 img {
+    height: 50vh; /* Adjust the image height as well */
+  }
+}
+

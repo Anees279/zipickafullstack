@@ -1,0 +1,8 @@
+.he{
+    font-size: 4rem;
+}
+@media (max-width: 576px) {
+    .he {
+        font-size: 2rem;
+    }
+}

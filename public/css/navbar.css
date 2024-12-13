@@ -1,0 +1,155 @@
+/* Default state for the navbar */
+#navbar-container {
+    background-color: rgba(248, 249, 250, 0.9); /* Default opaque background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Semi-transparent state when scrolled */
+  #navbar-container.scrolled {
+    background-color: rgba(248, 249, 250, 0.5); 50% transparency
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .navbar-nav {
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
+  }
+  
+  .logo img {
+    height: 60px;
+    max-width: 100px;
+  }
+  
+  .dropdown-menu li h6 {
+    color: #000;
+  }
+  
+  .navbar-nav {
+    gap: 9px;
+  }
+  
+  .navbar .nav-link {
+    color: #212529 !important;
+    font-size: 1.2rem;
+  }
+  
+  .search {
+    justify-content: space-around;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Optional hover effect */
+  }
+  
+  .dropdown-menu {
+    padding: 5px;
+    border: none;
+  }
+  
+  .navbar .dropdown-item:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar .dropdown-menu {
+    position: absolute;
+    z-index: 1050;
+    padding: 10px;
+  }
+  
+  .nav-item.dropdown {
+    text-align: left;
+  }
+  
+  .nav-item .dropdown-menu {
+    left: 0;
+    right: auto;
+    text-align: left;
+    border: none;
+  }
+  
+  .navbar-nav .nav-item {
+    text-align: left;
+  }
+  
+  .navbar-nav .nav-item a {
+    padding-left: 0;
+  }
+  /*  */
+  .search-input {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#no-result {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+  .fa {
+    color: black;
+  }
+  /* Cart Preview (Navbar Hover) */
+.cart-preview {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fa-shopping-cart:hover + .cart-preview {
+  display: block;
+}
+
+/* Other CSS for the navbar, etc. */
+
+  /* Mobile device adjustments */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      width: 100%;
+      text-align: left;
+      justify-content: flex-start;
+    }
+  
+    .navbar-collapse.show .navbar-nav {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+    .navbar-collapse {
+      width: 100%;
+    }
+  
+    .navbar-toggler {
+      border: none;
+    }
+  
+    .navbar-toggler:hover {
+      box-shadow: none !important;
+    }
+  }
+  
