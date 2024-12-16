@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",  // Path to your main server file (e.g., Node.js/Express)
+        "use": "@vercel/node" // Use the Vercel Node.js runtime
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/server.js" // Route all requests to the server file
+      }
+    ],
+    "env": {
+      "MONGO_URI_CONTACT": "your-mongo-uri-here",  // Your environment variable
+      "PORT": "3000"  // Your desired port (if needed)
+    }
+  }
+  
