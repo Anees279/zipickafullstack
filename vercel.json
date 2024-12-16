@@ -1,23 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "server.js", // Path to your main server file (e.g., Node.js/Express)
-      "use": "@vercel/node" // Use the Vercel Node.js runtime
-    }
+    { "src": "api/index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server.js" // Route all requests to the server file
-    }
-  ],
-  "env": {
-    "MONGO_URI_AMBASSADOR": "mongodb+srv://ambassador:Anees279%40@cluster0.1zpmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", 
-    "MONGO_URI_CONTACT": "mongodb+srv://aneesmir279:Anees279%40@cluster0.1zpmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-"MONGO_URI_DEALER": "mongodb+srv://dealership:Anees279%40@cluster0.1zpmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-
-
-    "PORT": "3000" // Your desired port (if needed)
-  }
+    { "src": "/(.*)", "dest": "api/index.js" }
+  ]
 }
